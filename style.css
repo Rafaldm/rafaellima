@@ -1,0 +1,327 @@
+/* Estilos para o perfil do colaborador e seus treinamentos */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #e2e8f0;
+  --card-bg: #ffffff;
+  --text-strong: #0f172a;
+  --text-soft: #475569;
+  --line: #d9e2ec;
+  --accent: #0b5fff;
+  --accent-soft: #e8f0ff;
+  --success: #1f9d57;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-strong);
+  background:
+    radial-gradient(circle at top right, #dbeafe 0%, transparent 34%),
+    linear-gradient(160deg, var(--bg-primary) 0%, #1e293b 40%, #334155 100%);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 14px 30px;
+}
+
+.card {
+  width: min(720px, 100%);
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.32);
+}
+
+.topo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo img {
+  width: clamp(92px, 20vw, 128px);
+  height: auto;
+  display: block;
+}
+
+.identificador {
+  margin: 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #1343b7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.perfil {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 156px 1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.foto {
+  display: grid;
+  place-items: center;
+}
+
+.foto img {
+  width: clamp(128px, 20vw, 152px);
+  height: clamp(128px, 20vw, 152px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  border: 2px solid #c7d8ff;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+}
+
+.titulo-perfil h1 {
+  margin: 0;
+  font-size: clamp(1.2rem, 3.2vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.titulo-perfil p {
+  margin: 6px 0 0;
+  color: var(--text-soft);
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+}
+
+.dados,
+.treinamentos {
+  margin-top: 20px;
+}
+
+.dados h2,
+.treinamentos h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+}
+
+.lista-dados,
+.treinamentos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-dados li {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.rotulo {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #64748b;
+}
+
+.valor {
+  display: block;
+  margin-top: 3px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.valor.destaque {
+  color: #0f766e;
+}
+
+.cabecalho-treinamentos {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.selo-status {
+  font-size: 12px;
+  color: #0f4f2f;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 999px;
+  padding: 5px 9px;
+  white-space: nowrap;
+}
+
+.grupo-treinamento {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.grupo-treinamento h3 {
+  margin: 0 0 9px;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.tabela-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.tabela-treinamentos {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 460px;
+  background: #ffffff;
+}
+
+.tabela-treinamentos th,
+.tabela-treinamentos td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.tabela-treinamentos th {
+  background: #eef4ff;
+  color: #1e3a8a;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.tabela-treinamentos tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.tabela-treinamentos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.col-status {
+  width: 132px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.status-ok {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #0f5132;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.treinamentos li {
+  background: #f8fafc;
+  border-left: 4px solid var(--success);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.treinamentos li:last-child {
+  margin-bottom: 0;
+}
+
+.nome-curso {
+  display: block;
+  font-weight: 700;
+  color: #111827;
+}
+
+.vencimento {
+  display: block;
+  margin-top: 4px;
+  color: #334155;
+  font-size: 13px;
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0055f7 0%, #0038a3 100%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 56, 163, 0.3);
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 540px) {
+  .page {
+    padding: 14px 10px 18px;
+  }
+
+  .card {
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  .topo-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .perfil {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .foto img {
+    width: 138px;
+    height: 138px;
+  }
+
+  .cabecalho-treinamentos {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabela-treinamentos {
+    min-width: 0;
+  }
+
+  .col-status {
+    width: 110px;
+  }
+}
