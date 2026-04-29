@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crachá do Funcionário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <article class="card" aria-label="Resumo profissional do colaborador">
+        <header class="topo-card">
+          <div class="logo">
+            <img src="img/logo.png" alt="Logo da Empresa" />
+          </div>
+
+          <p class="identificador">Treinamentos</p>
+        </header>
+
+        <section class="perfil">
+          <div class="foto">
+            <img src="img/foto.jpg" alt="Foto do funcionário Hector Gabriel" />
+          </div>
+
+          <div class="titulo-perfil">
+            <h1>Rafael Lima de Medeiros</h1>
+            <p>Técnico de Manutenção Hidráulica</p>
+          </div>
+        </section>
+
+        <section class="dados" aria-label="Dados cadastrais">
+          <h2>Dados do funcionário</h2>
+          <ul class="lista-dados">
+            <li>
+              <span class="rotulo">CPF</span>
+              <span class="valor">438.113.768-02</span>
+            </li>
+            <li>
+              <span class="rotulo">Unidade</span>
+              <span class="valor">Unipar - Operações Industriais</span>
+            </li>
+            <li>
+              <span class="rotulo">Situação</span>
+              <span class="valor destaque">Ativo e apto para operação</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="treinamentos" aria-label="Controle de vencimentos">
+          <div class="cabecalho-treinamentos">
+            <h2>Treinamentos e vencimentos</h2>
+            <span class="selo-status">Atualizado em abr/2026</span>
+          </div>
+
+          <div class="grupo-treinamento">
+            <h3>Normas Regulamentadoras (NR)</h3>
+            <div class="tabela-wrapper">
+              <table class="tabela-treinamentos">
+                <thead>
+                  <tr>
+                    <th>Norma</th>
+                    <th>Vencimento</th>
+                    <th class="col-status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NR-06 EPI</td>
+                    <td>julho/2026</td>
+                    <td class="col-status">
+                      <span class="status-ok">&#10003; Em dia</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NR-12 Máquinas e Equipamentos</td>
+                    <td>julho/2026</td>
+                    <td class="col-status">
+                      <span class="status-ok">&#10003; Em dia</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NR-35 Trabalho em Altura</td>
+                    <td>julho/2026</td>
+                    <td class="col-status">
+                      <span class="status-ok">&#10003; Em dia</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NR-20 Líquidos Inflamáveis</td>
+                    <td>julho/2026</td>
+                    <td class="col-status">
+                      <span class="status-ok">&#10003; Em dia</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grupo-treinamento">
+            <h3>Cursos Internos Unipar</h3>
+            <div class="tabela-wrapper">
+              <table class="tabela-treinamentos">
+                <thead>
+                  <tr>
+                    <th>Curso</th>
+                    <th>Vencimento</th>
+                    <th class="col-status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Processo de Liberação de Trabalho Seguro</td>
+                    <td>março/2029</td>
+                    <td class="col-status">
+                      <span class="status-ok">&#10003; Em dia</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <a
+          href="pdf/treinamentos.pdf"
+          target="_blank"
+          class="botao"
+          rel="noopener noreferrer"
+        >
+          Ver certificados em PDF
+        </a>
+      </article>
+    </main>
+  </body>
+</html>
